@@ -250,13 +250,15 @@ export default ({ restaurants }) => {
     )
   return (
     <div className="w-full h-full flex items-center justify-center text-3xl text-pink">
-      <LoadingSpinner />
+      
     </div>
   )
 }
 
+// <LoadingSpinner />
+
 export async function getStaticProps() {
-  const airtableApiKey = process.env.AIRTABLE_API_KEY
+  /*const airtableApiKey = process.env.AIRTABLE_API_KEY
   const airtableBaseKey = process.env.AIRTABLE_BASE_KEY
 
   const Airtable = require('airtable')
@@ -272,7 +274,8 @@ export async function getStaticProps() {
     .all()
   const restaurants = await Promise.all(
     records.sort(() => 0.5 - Math.random()).map(record => record.fields)
-  )
+  )*/
 
-  return { props: { restaurants } }
+  // return { props: { restaurants } }
+  return { props: { restaurants: [] } }
 }

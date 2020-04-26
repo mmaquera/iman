@@ -46,8 +46,8 @@ export default ({ restaurants }) => {
 }
 
 export async function getStaticProps() {
-  const airtableApiKey = process.env.AIRTABLE_API_KEY
-  const airtableBaseKey = process.env.AIRTABLE_BASE_KEY
+  /*const airtableApiKey = process.env.AIRTABLE_API_KEY || "key5KdM6DWqs7R3ss"
+  const airtableBaseKey = process.env.AIRTABLE_BASE_KEY || "key5KdM6DWqs7R3ss" 
   // Reducing number of requests to Maps API
   const googleMapsApiKey =
     process.env.NODE_ENV === 'production'
@@ -80,7 +80,8 @@ export async function getStaticProps() {
     })
     const positionData = await res.json()
     if (positionData) restaurants[i].positionData = positionData
-  }
+  }*/
 
-  return { props: { restaurants } }
+  // return { props: { [restaurants] } }
+  return { props: { restaurants: [] } }
 }
